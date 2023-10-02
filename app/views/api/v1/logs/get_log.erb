@@ -1,0 +1,6 @@
+<h2><%= @log[:filename] %></h2>
+  <ol>
+    <% @log[:content].each do |line| %>
+    <li><%= line %></li><br>
+    <% end %>
+  </ol>

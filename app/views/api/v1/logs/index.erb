@@ -1,0 +1,24 @@
+<%= form_with url: "/api/v1/logs", method: :get do |form| %>
+  <div>
+    <%= form.label :filename, "Filename" %><br>
+    <%= form.text_field :filename, :required => true %><br>
+  </div>
+  <br>
+
+  <div>
+    <%= form.label :n, "Number of lines" %><br>
+    <%= form.text_field :n %>
+  </div>
+  <br>
+
+  <div>
+    <%= form.label :filter, "Search keywords" %><br>
+    <%= form.text_field :filter %>
+  </div>
+  <br>
+  <br>
+
+  <div>
+    <%= form.submit "View log" %>
+  </div>
+<% end %>
